@@ -1,0 +1,13 @@
+name: Success Check
+
+on: [push]
+
+jobs:
+  success-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Show success message
+        run: echo "✅ Code pushed successfully!"
